@@ -1,11 +1,9 @@
 package br.com.minhapizzaria.presenter.interfaces
 
-import androidx.lifecycle.MutableLiveData
 import br.com.minhapizzaria.domain.Pizza
 import br.com.minhapizzaria.domain.Signin
-import br.com.minhapizzaria.domain.Teste
+import br.com.minhapizzaria.domain.ValidadorLogin
 import retrofit2.Call
-import retrofit2.Response
 import retrofit2.http.*
 
 /**
@@ -17,6 +15,6 @@ interface PizzariaApi {
     fun getPizza(): Call<MutableList<Pizza>>
 
     @POST("signin")
-    fun getLogin(@Body teste: Teste):Call<Signin>
+    fun getLogin(@Body validadorLogin: ValidadorLogin):Call<Signin>
 
 }

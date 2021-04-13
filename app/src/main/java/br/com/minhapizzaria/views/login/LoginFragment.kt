@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import br.com.minhapizzaria.R
 import br.com.minhapizzaria.databinding.FragmentLoginBinding
 import br.com.minhapizzaria.domain.Signin
-import br.com.minhapizzaria.domain.Teste
+import br.com.minhapizzaria.domain.ValidadorLogin
 import br.com.minhapizzaria.presenter.service.LoginService
 import com.google.android.material.snackbar.Snackbar
 import retrofit2.Call
@@ -93,7 +93,7 @@ class LoginFragment : Fragment() {
 
     private fun login() {
 
-        val teste = Teste(usuario,senha)
+        val teste = ValidadorLogin(usuario,senha)
         val call: Call<Signin> =
             LoginService.instance?.getLoginApi()?.getLogin(teste) as Call<Signin>
         call.enqueue(object : Callback<Signin> {
