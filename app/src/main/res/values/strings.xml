@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MinhaPizzaria</string>
+    
+    <string name="title_login">Login</string>
+    <string name="title_escolha">Escolha</string>
+    <string name="title_detalhe">Detalhe</string>
+    <string name="title_sucesso">Sucesso</string>
+
+    <string name="mensagem_sucesso">Compra efetuada com sucesso!</string>
+    <string name="voltar">Voltar</string>
+    <string name="entrar">Entrar</string>
+    <string name="usuario">usuário</string>
+    <string name="senha">senha</string>
+    <string name="sabor_pizza">Pizza de </string>
+    <string name="partir_de">A partir de:</string>
+    <string name="preco">R$ </string>
+    <string name="busca">Search</string>
+    <string name="sabor">Escolha o seu sabor</string>
+    <string name="escolher_tamanho">Escolha o seu tamanho</string>
+    <string name="pequena">P</string>
+    <string name="media">M</string>
+    <string name="grande">G</string>
+    <string name="comprar">Comprar</string>
+</resources>
