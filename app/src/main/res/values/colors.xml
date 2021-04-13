@@ -6,15 +6,16 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="black_fundo">#181818</color>
     <color name="white">#FFFFFFFF</color>
     <color name="branco">#F7F7F7</color>
-    <color name="cor_rating_bar">#FDC650</color>
-    <color name="cor_busca">#3C3C43</color>
-    <color name="branco_fundo_edit_text">#F2F2F2</color>
-    <color name="branco_text">#F5F5F5</color>
+    <color name="rating_bar">#FDC650</color>
+    <color name="busca">#3C3C43</color>
+    <color name="branco_fundo">#F2F2F2</color>
+    <color name="branco_texto">#F5F5F5</color>
     <color name="botao_verde">#7AC64F</color>
     <color name="fundo">#282C30</color>
-    <color name="fundo_edit_text">#7E7E8B</color>
-    <color name="fundo_edit_text2">#E6E6E7</color>
+    <color name="fundo1">#7E7E8B</color>
+    <color name="fundo2">#E6E6E7</color>
 
 </resources>

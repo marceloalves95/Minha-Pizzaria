@@ -1,4 +1,4 @@
-package br.com.minhapizzaria.views.login
+package br.com.minhapizzaria.ui.login
 
 import android.os.Bundle
 import android.view.LayoutInflater

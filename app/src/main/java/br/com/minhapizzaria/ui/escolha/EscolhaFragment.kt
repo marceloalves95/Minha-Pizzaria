@@ -1,4 +1,4 @@
-package br.com.minhapizzaria.views.escolha
+package br.com.minhapizzaria.ui.escolha
 
 import android.os.Bundle
 import android.text.Editable

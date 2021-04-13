@@ -1,4 +1,4 @@
-package br.com.minhapizzaria.views.detalhe
+package br.com.minhapizzaria.ui.detalhe
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

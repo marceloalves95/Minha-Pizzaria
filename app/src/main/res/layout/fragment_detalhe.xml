@@ -43,7 +43,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="7dp"
-        android:progressTint="@color/cor_rating_bar"
+        android:progressTint="@color/rating_bar"
         android:rating="2.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"

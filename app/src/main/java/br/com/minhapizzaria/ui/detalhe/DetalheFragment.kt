@@ -1,4 +1,4 @@
-package br.com.minhapizzaria.views.detalhe
+package br.com.minhapizzaria.ui.detalhe
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -69,10 +69,10 @@ class DetalheFragment : Fragment() {
         binding.precoPizza.text = precoPizzaPequenaCorrigido
 
         binding.pizzaPequena.setBackgroundColor(resources.getColor(R.color.botao_verde))
-        binding.pizzaPequena.setTextColor(resources.getColor(R.color.branco_fundo_edit_text))
-        binding.pizzaMedia.setBackgroundColor(resources.getColor(R.color.branco_fundo_edit_text))
+        binding.pizzaPequena.setTextColor(resources.getColor(R.color.branco_fundo))
+        binding.pizzaMedia.setBackgroundColor(resources.getColor(R.color.branco_fundo))
         binding.pizzaMedia.setTextColor(resources.getColor(R.color.fundo))
-        binding.pizzaGrande.setBackgroundColor(resources.getColor(R.color.branco_fundo_edit_text))
+        binding.pizzaGrande.setBackgroundColor(resources.getColor(R.color.branco_fundo))
         binding.pizzaGrande.setTextColor(resources.getColor(R.color.fundo))
 
 
@@ -80,10 +80,10 @@ class DetalheFragment : Fragment() {
 
             binding.precoPizza.text = precoPizzaPequenaCorrigido
             binding.pizzaPequena.setBackgroundColor(resources.getColor(R.color.botao_verde))
-            binding.pizzaPequena.setTextColor(resources.getColor(R.color.branco_fundo_edit_text))
-            binding.pizzaMedia.setBackgroundColor(resources.getColor(R.color.branco_fundo_edit_text))
+            binding.pizzaPequena.setTextColor(resources.getColor(R.color.branco_fundo))
+            binding.pizzaMedia.setBackgroundColor(resources.getColor(R.color.branco_fundo))
             binding.pizzaMedia.setTextColor(resources.getColor(R.color.fundo))
-            binding.pizzaGrande.setBackgroundColor(resources.getColor(R.color.branco_fundo_edit_text))
+            binding.pizzaGrande.setBackgroundColor(resources.getColor(R.color.branco_fundo))
             binding.pizzaGrande.setTextColor(resources.getColor(R.color.fundo))
 
         }
@@ -93,10 +93,10 @@ class DetalheFragment : Fragment() {
             binding.precoPizza.text = precoPizzaMediaCorrigida
 
             binding.pizzaMedia.setBackgroundColor(resources.getColor(R.color.botao_verde))
-            binding.pizzaMedia.setTextColor(resources.getColor(R.color.branco_fundo_edit_text))
-            binding.pizzaPequena.setBackgroundColor(resources.getColor(R.color.branco_fundo_edit_text))
+            binding.pizzaMedia.setTextColor(resources.getColor(R.color.branco_fundo))
+            binding.pizzaPequena.setBackgroundColor(resources.getColor(R.color.branco_fundo))
             binding.pizzaPequena.setTextColor(resources.getColor(R.color.fundo))
-            binding.pizzaGrande.setBackgroundColor(resources.getColor(R.color.branco_fundo_edit_text))
+            binding.pizzaGrande.setBackgroundColor(resources.getColor(R.color.branco_fundo))
             binding.pizzaGrande.setTextColor(resources.getColor(R.color.fundo))
 
         }
@@ -106,10 +106,10 @@ class DetalheFragment : Fragment() {
             binding.precoPizza.text = precoPizzaGrandeCorrigido
 
             binding.pizzaGrande.setBackgroundColor(resources.getColor(R.color.botao_verde))
-            binding.pizzaGrande.setTextColor(resources.getColor(R.color.branco_fundo_edit_text))
-            binding.pizzaMedia.setBackgroundColor(resources.getColor(R.color.branco_fundo_edit_text))
+            binding.pizzaGrande.setTextColor(resources.getColor(R.color.branco_fundo))
+            binding.pizzaMedia.setBackgroundColor(resources.getColor(R.color.branco_fundo))
             binding.pizzaMedia.setTextColor(resources.getColor(R.color.fundo))
-            binding.pizzaPequena.setBackgroundColor(resources.getColor(R.color.branco_fundo_edit_text))
+            binding.pizzaPequena.setBackgroundColor(resources.getColor(R.color.branco_fundo))
             binding.pizzaPequena.setTextColor(resources.getColor(R.color.fundo))
 
         }

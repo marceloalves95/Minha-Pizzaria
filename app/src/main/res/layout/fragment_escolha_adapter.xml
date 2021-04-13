@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@color/black"
+    android:background="@color/black_fundo"
     >
 
     <androidx.cardview.widget.CardView
@@ -85,7 +85,6 @@
                 android:id="@+id/valor_pizza"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/preco"
                 android:textColor="@color/branco"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/textView4"
@@ -99,7 +98,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
-                android:progressTint="@color/cor_rating_bar"
+                android:progressTint="@color/rating_bar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 

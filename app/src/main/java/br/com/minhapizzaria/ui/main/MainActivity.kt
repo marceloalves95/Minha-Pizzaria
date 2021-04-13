@@ -1,4 +1,4 @@
-package br.com.minhapizzaria.views.main
+package br.com.minhapizzaria.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
