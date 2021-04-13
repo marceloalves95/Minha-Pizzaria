@@ -9,54 +9,60 @@
 Para começar, inclua as seguintes dependências adicionando ao `build.gradle` do módulo do projeto e após isso atualize o `Gradle`:
 
 ```groovy
+plugins {
+    id 'kotlin-parcelize'
+    id "androidx.navigation.safeargs.kotlin"
+}
+android {
+        defaultConfig {
+        ...
+        //VectorDrawables
+        vectorDrawables.useSupportLibrary = true
+        
+        }
+        buildFeatures{
+        
+        //ViewBinding
+        viewBinding true
+        }
+
 dependencies {
-    //Implementação das bibliotecas usadas neste projeto
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation 'com.google.firebase:firebase-analytics:18.0.2'
-    implementation 'com.google.firebase:firebase-messaging:21.0.1'
-    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
-    implementation 'com.github.bumptech.glide:glide:4.7.1'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
-    implementation platform ('com.google.firebase:firebase-bom:26.3.0')
+    //Principais dependências
+    
+    //Navigation View
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.6.0'
+    
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    ...
 }
 ```
 Depois, inclue a seguinte linha `build.gradle` no módulo do projeto e atualize o `Gradle`:
 
 ```groovy
-dependencies {
+ buildscript {
+    ext.nav_version = "2.3.4"
     ...
-    classpath 'com.google.gms:google-services:4.3.5'
-    // NOTE: Do not place your application dependencies here; they belong
-    // in the individual module build.gradle files
+ dependencies {
+        //Navigation View e Safe Args
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+        ...
     }
+    
 ```
 
 Escreva as seguintes linhas no `Android Manifest`:
 
 ```xml
- <service
-       android:name=".service.MyFirebaseMessagingService"
-       android:enabled="true"
-       android:exported="true">
-       <intent-filter>
-             <action android:name="com.google.firebase.MESSAGING_EVENT" />
-       </intent-filter>
-</service>
-<service
-      android:name=".service.MyFirebaseInstanceIdService"
-      android:enabled="true"
-      android:exported="true">
-      <intent-filter>
-              <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-      </intent-filter>
-</service>
-<provider
-      android:name=".databases.NoteProvider"
-      android:authorities="seu pacote.provider"
-      android:enabled="true"
-      android:exported="true" >
-</provider>
+//Permissão de Internet
+<uses-permission android:name="android.permission.INTERNET" />
 ```
 
 ### Telas do aplicativo 
