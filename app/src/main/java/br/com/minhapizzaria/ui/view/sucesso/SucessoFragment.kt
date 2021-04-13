@@ -1,4 +1,4 @@
-package br.com.minhapizzaria.ui.sucesso
+package br.com.minhapizzaria.ui.main.view.detalhe.sucesso
 
 import android.graphics.drawable.AnimatedVectorDrawable
 import android.graphics.drawable.Drawable

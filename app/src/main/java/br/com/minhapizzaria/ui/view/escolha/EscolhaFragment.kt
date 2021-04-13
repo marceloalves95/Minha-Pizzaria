@@ -1,4 +1,4 @@
-package br.com.minhapizzaria.ui.escolha
+package br.com.minhapizzaria.ui.main.view.detalhe.escolha
 
 import android.os.Bundle
 import android.text.Editable
@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.minhapizzaria.databinding.FragmentEscolhaBinding
 import br.com.minhapizzaria.domain.Pizza
-import br.com.minhapizzaria.presenter.adapter.EscolhaFragmentAdapter
+import br.com.minhapizzaria.ui.adapter.EscolhaFragmentAdapter
 import br.com.minhapizzaria.presenter.service.PizzaService
 import retrofit2.Call
 import retrofit2.Callback

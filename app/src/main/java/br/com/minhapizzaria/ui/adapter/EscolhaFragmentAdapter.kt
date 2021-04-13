@@ -1,4 +1,4 @@
-package br.com.minhapizzaria.presenter.adapter
+package br.com.minhapizzaria.ui.adapter
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -7,9 +7,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import br.com.minhapizzaria.databinding.FragmentEscolhaAdapterBinding
 import br.com.minhapizzaria.domain.Pizza
-import br.com.minhapizzaria.ui.detalhe.DetalheArgs
-import br.com.minhapizzaria.ui.escolha.EscolhaFragment
-import br.com.minhapizzaria.ui.escolha.EscolhaFragmentDirections
+import br.com.minhapizzaria.ui.main.view.detalhe.DetalheArgs
+import br.com.minhapizzaria.ui.main.view.detalhe.escolha.EscolhaFragment
+import br.com.minhapizzaria.ui.main.view.detalhe.escolha.EscolhaFragmentDirections
 import com.bumptech.glide.Glide
 import java.math.BigDecimal
 import java.math.RoundingMode

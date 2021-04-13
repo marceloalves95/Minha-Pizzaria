@@ -1,4 +1,4 @@
-package br.com.minhapizzaria.ui.detalhe
+package br.com.minhapizzaria.ui.main.view.detalhe
 
 import android.os.Bundle
 import android.view.LayoutInflater

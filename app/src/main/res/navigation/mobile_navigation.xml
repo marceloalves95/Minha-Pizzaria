@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="br.com.minhapizzaria.ui.login.LoginFragment"
+        android:name="br.com.minhapizzaria.ui.main.view.detalhe.login.LoginFragment"
         android:label="@string/title_login"
         tools:layout="@layout/fragment_login"
         >
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/escolhaFragment"
-        android:name="br.com.minhapizzaria.ui.escolha.EscolhaFragment"
+        android:name="br.com.minhapizzaria.ui.main.view.detalhe.escolha.EscolhaFragment"
         android:label="@string/title_escolha"
         tools:layout="@layout/fragment_escolha"
         >
@@ -38,7 +38,7 @@
     </fragment>
     <fragment
         android:id="@+id/detalheFragment"
-        android:name="br.com.minhapizzaria.ui.detalhe.DetalheFragment"
+        android:name="br.com.minhapizzaria.ui.main.view.detalhe.DetalheFragment"
         android:label="@string/title_detalhe"
         tools:layout="@layout/fragment_detalhe"
         >
@@ -61,7 +61,7 @@
     </fragment>
     <fragment
         android:id="@+id/sucessoFragment"
-        android:name="br.com.minhapizzaria.ui.sucesso.SucessoFragment"
+        android:name="br.com.minhapizzaria.ui.main.view.detalhe.sucesso.SucessoFragment"
         android:label="@string/title_sucesso"
         tools:layout="@layout/fragment_sucesso"
         >

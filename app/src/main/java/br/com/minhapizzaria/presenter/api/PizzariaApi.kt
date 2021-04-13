@@ -1,4 +1,4 @@
-package br.com.minhapizzaria.presenter.interfaces
+package br.com.minhapizzaria.presenter.api
 
 import br.com.minhapizzaria.domain.Pizza
 import br.com.minhapizzaria.domain.Signin

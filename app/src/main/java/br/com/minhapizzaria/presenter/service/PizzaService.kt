@@ -1,6 +1,6 @@
 package br.com.minhapizzaria.presenter.service
 
-import br.com.minhapizzaria.presenter.interfaces.PizzariaApi
+import br.com.minhapizzaria.presenter.api.PizzariaApi
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

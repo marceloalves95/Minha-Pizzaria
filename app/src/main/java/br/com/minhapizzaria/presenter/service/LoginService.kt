@@ -1,6 +1,6 @@
 package br.com.minhapizzaria.presenter.service
 
-import br.com.minhapizzaria.presenter.interfaces.PizzariaApi
+import br.com.minhapizzaria.presenter.api.PizzariaApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
