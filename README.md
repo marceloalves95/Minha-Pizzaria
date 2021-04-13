@@ -18,7 +18,6 @@ android {
         ...
         //VectorDrawables
         vectorDrawables.useSupportLibrary = true
-        
         }
         buildFeatures{
         
@@ -58,7 +57,7 @@ Depois, inclue a seguinte linha `build.gradle` no módulo do projeto e atualize 
     
 ```
 
-Escreva as seguintes linhas no `Android Manifest`:
+Escreva a seguinte linha no `Android Manifest`:
 
 ```xml
 //Permissão de Internet
