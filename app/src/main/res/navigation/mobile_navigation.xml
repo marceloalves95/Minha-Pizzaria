@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="br.com.minhapizzaria.ui.main.view.detalhe.login.LoginFragment"
+        android:name="br.com.minhapizzaria.ui.view.login.LoginFragment"
         android:label="@string/title_login"
         tools:layout="@layout/fragment_login"
         >
@@ -22,54 +22,39 @@
     </fragment>
     <fragment
         android:id="@+id/escolhaFragment"
-        android:name="br.com.minhapizzaria.ui.main.view.detalhe.escolha.EscolhaFragment"
+        android:name="br.com.minhapizzaria.ui.view.escolha.EscolhaFragment"
         android:label="@string/title_escolha"
         tools:layout="@layout/fragment_escolha"
         >
         <action
             android:id="@+id/action_escolhaFragment_to_detalheFragment"
-            app:destination="@id/detalheFragment"
-            tools:layout="@layout/fragment_escolha"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
-            />
+            app:destination="@id/detalheFragment" />
     </fragment>
     <fragment
         android:id="@+id/detalheFragment"
-        android:name="br.com.minhapizzaria.ui.main.view.detalhe.DetalheFragment"
+        android:name="br.com.minhapizzaria.ui.view.detalhe.DetalheFragment"
         android:label="@string/title_detalhe"
         tools:layout="@layout/fragment_detalhe"
         >
-        <action
-            android:id="@+id/action_detalheFragment_to_sucessoFragment"
-            app:destination="@id/sucessoFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
-            />
         <argument
             android:name="detalhes"
-            app:argType="br.com.minhapizzaria.views.detalhe.DetalheArgs"
-            app:nullable="true"
-            android:defaultValue="@null" />
+            app:argType="br.com.minhapizzaria.ui.view.detalhe.DetalheArgs"
+            app:nullable="true" />
         <argument
             android:name="rating"
             app:argType="float" />
+        <action
+            android:id="@+id/action_detalheFragment_to_sucessoFragment"
+            app:destination="@id/sucessoFragment" />
     </fragment>
     <fragment
         android:id="@+id/sucessoFragment"
-        android:name="br.com.minhapizzaria.ui.main.view.detalhe.sucesso.SucessoFragment"
+        android:name="br.com.minhapizzaria.ui.view.sucesso.SucessoFragment"
         android:label="@string/title_sucesso"
         tools:layout="@layout/fragment_sucesso"
         >
         <action
             android:id="@+id/action_sucessoFragment_to_escolhaFragment"
-            app:destination="@id/escolhaFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_right"
-            />
+            app:destination="@id/escolhaFragment" />
     </fragment>
 </navigation>

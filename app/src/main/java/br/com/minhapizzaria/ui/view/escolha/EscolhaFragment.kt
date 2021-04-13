@@ -1,4 +1,4 @@
-package br.com.minhapizzaria.ui.main.view.detalhe.escolha
+package br.com.minhapizzaria.ui.view.escolha
 
 import android.os.Bundle
 import android.text.Editable
@@ -12,13 +12,12 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.minhapizzaria.databinding.FragmentEscolhaBinding
 import br.com.minhapizzaria.domain.Pizza
+import br.com.minhapizzaria.presenter.service.RetrofitBuilder
 import br.com.minhapizzaria.ui.adapter.EscolhaFragmentAdapter
-import br.com.minhapizzaria.presenter.service.PizzaService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
-
 
 /**
  * Created by RubioAlves on 09/04/2021
@@ -27,8 +26,8 @@ class EscolhaFragment : Fragment() {
 
     private var _binding: FragmentEscolhaBinding? = null
     private val binding get() = _binding!!
-    private lateinit var adapter:EscolhaFragmentAdapter
-    private lateinit var listaPizza:MutableList<Pizza>
+    private lateinit var adapter: EscolhaFragmentAdapter
+    private lateinit var listaPizza: List<Pizza>
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -37,6 +36,8 @@ class EscolhaFragment : Fragment() {
     ): View? {
 
         _binding = FragmentEscolhaBinding.inflate(inflater, container, false)
+
+        getAllPizzas()
 
         return binding.root
     }
@@ -50,44 +51,34 @@ class EscolhaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initBusca()
-        setupRecyclerView()
     }
 
-    private fun setupRecyclerView(){
-
-        binding.recyclerView.layoutManager = LinearLayoutManager(context)
-        binding.recyclerView.setHasFixedSize(true)
-
-        getAllPizzas()
-
-
-    }
 
     private fun getAllPizzas() {
 
         binding.progressBar.visibility = View.VISIBLE
 
-        val call: Call<MutableList<Pizza>> = PizzaService.instance?.getPizzaApi()?.getPizza() as Call<MutableList<Pizza>>
+        val call: Call<List<Pizza>> = RetrofitBuilder.pizzariaApi.getPizza()
 
-        call.enqueue(object : Callback<MutableList<Pizza>> {
-            override fun onResponse(call: Call<MutableList<Pizza>>, response: Response<MutableList<Pizza>>) {
-
+        call.enqueue(object : Callback<List<Pizza>> {
+            override fun onResponse(call: Call<List<Pizza>>, response: Response<List<Pizza>>) {
                 listaPizza = response.body() as MutableList<Pizza>
 
                 adapter = EscolhaFragmentAdapter(this@EscolhaFragment, listaPizza)
+                setupUI()
                 binding.recyclerView.adapter = adapter
-
 
                 response.let {
 
                     it.body()
-                    binding.progressBar.visibility = View.INVISIBLE
-
+                    binding.recyclerView.visibility = View.VISIBLE
+                    binding.progressBar.visibility = View.GONE
                 }
+
 
             }
 
-            override fun onFailure(call: Call<MutableList<Pizza>>, t: Throwable) {
+            override fun onFailure(call: Call<List<Pizza>>, t: Throwable) {
                 Toast.makeText(requireContext(), t.message, Toast.LENGTH_SHORT).show()
                 binding.progressBar.visibility = View.INVISIBLE
             }
@@ -96,8 +87,7 @@ class EscolhaFragment : Fragment() {
 
     }
 
-
-    private fun initBusca(){
+    private fun initBusca() {
 
         binding.busca.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -115,11 +105,11 @@ class EscolhaFragment : Fragment() {
 
     }
 
-    private fun buscaPizza(texto:String){
+    private fun buscaPizza(texto: String) {
 
-        val listPizza:MutableList<Pizza> = mutableListOf()
+        val listPizza: MutableList<Pizza> = mutableListOf()
 
-        for (pizza in listaPizza){
+        for (pizza in listaPizza) {
 
             if (pizza.name.toLowerCase(Locale.ROOT).contains(texto.toLowerCase(Locale.ROOT))) listPizza.add(pizza)
             Log.d("Lista", pizza.toString())
@@ -132,5 +122,13 @@ class EscolhaFragment : Fragment() {
     }
 
 
+    private fun setupUI() {
+
+        binding.recyclerView.layoutManager = LinearLayoutManager(context)
+        binding.recyclerView.setHasFixedSize(true)
+
+
+    }
 
 }
+

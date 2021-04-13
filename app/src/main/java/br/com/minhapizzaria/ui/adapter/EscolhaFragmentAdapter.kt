@@ -7,9 +7,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import br.com.minhapizzaria.databinding.FragmentEscolhaAdapterBinding
 import br.com.minhapizzaria.domain.Pizza
-import br.com.minhapizzaria.ui.main.view.detalhe.DetalheArgs
-import br.com.minhapizzaria.ui.main.view.detalhe.escolha.EscolhaFragment
-import br.com.minhapizzaria.ui.main.view.detalhe.escolha.EscolhaFragmentDirections
+import br.com.minhapizzaria.ui.view.detalhe.DetalheArgs
+import br.com.minhapizzaria.ui.view.escolha.EscolhaFragment
+import br.com.minhapizzaria.ui.view.escolha.EscolhaFragmentDirections
 import com.bumptech.glide.Glide
 import java.math.BigDecimal
 import java.math.RoundingMode
@@ -17,7 +17,7 @@ import java.math.RoundingMode
 /**
  * Created by RubioAlves on 10/04/2021
  */
-class EscolhaFragmentAdapter(private val escolhaFragment: EscolhaFragment, private var listaPizza:MutableList<Pizza>) : RecyclerView.Adapter<EscolhaFragmentAdapter.EscolhaFragmentViewHolder>() {
+class EscolhaFragmentAdapter(private val escolhaFragment: EscolhaFragment, private var listaPizza:List<Pizza>) : RecyclerView.Adapter<EscolhaFragmentAdapter.EscolhaFragmentViewHolder>() {
 
 
     inner class EscolhaFragmentViewHolder(private val item: FragmentEscolhaAdapterBinding) : RecyclerView.ViewHolder(item.root) {
@@ -77,6 +77,7 @@ class EscolhaFragmentAdapter(private val escolhaFragment: EscolhaFragment, priva
         escolhaFragment.findNavController().navigate(action)
 
     }
+
 
     fun buscarPizzas(lista:MutableList<Pizza>){
 
