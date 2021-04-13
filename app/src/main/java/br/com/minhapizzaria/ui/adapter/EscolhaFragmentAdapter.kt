@@ -25,7 +25,6 @@ class EscolhaFragmentAdapter(private val escolhaFragment: EscolhaFragment, priva
         fun bind(pizza: Pizza){
 
             val decimal = BigDecimal(pizza.priceP.toDouble()).setScale(2, RoundingMode.HALF_EVEN)
-            Log.d("Teste", decimal.toString())
             val nomePizza =  "Pizza de ${pizza.name}"
             val valorPizza = "R$ $decimal"
             val precoPizzaCorrigido = valorPizza.replace(".", ",")
@@ -44,9 +43,6 @@ class EscolhaFragmentAdapter(private val escolhaFragment: EscolhaFragment, priva
             }
 
         }
-
-
-
 
     }
 

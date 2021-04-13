@@ -58,7 +58,7 @@ class EscolhaFragment : Fragment() {
 
         binding.progressBar.visibility = View.VISIBLE
 
-        val call: Call<List<Pizza>> = RetrofitBuilder.pizzariaApi.getPizza()
+        val call: Call<List<Pizza>> = RetrofitBuilder.pizzaApi.getPizza()
 
         call.enqueue(object : Callback<List<Pizza>> {
             override fun onResponse(call: Call<List<Pizza>>, response: Response<List<Pizza>>) {
@@ -112,7 +112,6 @@ class EscolhaFragment : Fragment() {
         for (pizza in listaPizza) {
 
             if (pizza.name.toLowerCase(Locale.ROOT).contains(texto.toLowerCase(Locale.ROOT))) listPizza.add(pizza)
-            Log.d("Lista", pizza.toString())
 
         }
 

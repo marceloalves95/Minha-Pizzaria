@@ -11,7 +11,7 @@ import br.com.minhapizzaria.R
 import br.com.minhapizzaria.databinding.FragmentLoginBinding
 import br.com.minhapizzaria.domain.Signin
 import br.com.minhapizzaria.domain.ValidadorLogin
-import br.com.minhapizzaria.presenter.service.LoginService
+import br.com.minhapizzaria.presenter.service.RetrofitBuilder
 import com.google.android.material.snackbar.Snackbar
 import retrofit2.Call
 import retrofit2.Callback
@@ -93,9 +93,9 @@ class LoginFragment : Fragment() {
 
     private fun login() {
 
-        val teste = ValidadorLogin(usuario,senha)
-        val call: Call<Signin> =
-            LoginService.instance?.getLoginApi()?.getLogin(teste) as Call<Signin>
+        val login = ValidadorLogin(usuario,senha)
+        val call: Call<Signin> = RetrofitBuilder.loginApi.getLogin(login)
+
         call.enqueue(object : Callback<Signin> {
             override fun onResponse(call: Call<Signin>, response: Response<Signin>) {
 

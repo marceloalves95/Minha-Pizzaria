@@ -12,12 +12,6 @@ import retrofit2.http.*
  */
 interface PizzariaApi {
 
-    /*
-    @GET("pizza")
-    fun getPizza(): Call<MutableList<Pizza>>
-
-     */
-
     @GET("pizza")
     fun getPizza():Call<List<Pizza>>
 
